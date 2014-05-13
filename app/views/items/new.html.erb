@@ -1,0 +1,8 @@
+<h1>Add an Item to the Shopping List</h1>
+
+<%= form_for @item do |f| %>
+    Item: <%= f.text_field :name %>
+    Quantity: <%= f.text_field :quantity %>
+    Description: <%= f.text_field :description %>
+    <%= f.submit %>
+<% end %>

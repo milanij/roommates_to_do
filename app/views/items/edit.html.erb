@@ -1,0 +1,8 @@
+<h1>Edit an Item</h1>
+
+<%= form_for @item do |f| %>
+    Item: <%= f.text_field :name %><br>
+    Quantity: <%= f.text_field :quantity %><br>
+    Description: <%= f.text_field :description %>
+    <%= f.submit %>
+<% end %>

@@ -3,4 +3,5 @@ class Item
   field :name, type: String
   field :quantity, type: Float
   field :description, type: String
+  
 end
