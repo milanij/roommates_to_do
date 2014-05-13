@@ -1,4 +1,11 @@
 RoommatesToDo::Application.routes.draw do
+  get "lists/index"
+  get "lists/new"
+  get "lists/create"
+  get "lists/edit"
+  get "lists/update"
+  get "lists/show"
+  get "lists/destroy"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

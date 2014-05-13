@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
+Item.destroy_all
+
+Item.create( name: "Bananas", quantity: 3, description: "Green One's Please!!!!" )
+Item.create( name: "PG Tips", quantity: 1, description: "Get the big box, please" )
+
