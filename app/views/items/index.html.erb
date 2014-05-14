@@ -3,13 +3,11 @@
     <% @items.each do |g| %>
         <ul>
             <%= link_to item_path g do %>
-                <li>Name: <%= g.name %></li>
+                <li><strong>Name: </strong><%= g.name %></li>
                 <% end %>
-                <li>Quantity: <%= g.quantity %></li>
-                <li>Description: <%= g.description %></li>
+                <li><strong>Quantity: </strong><%= g.quantity %></li>
+                <li><strong>Description: </strong><%= g.description %></li>
                 <hr><br><br>
         </ul>
     <% end %>
-
-<%= link_to "Add an Item to the Shopping List", new_item_path(@item) %>
 
