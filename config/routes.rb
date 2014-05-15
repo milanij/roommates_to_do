@@ -3,6 +3,7 @@ RoommatesToDo::Application.routes.draw do
   resource :sessions, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
 
+  root 'sessions#new'
   
   # get "users/new"
   # get "users/create"
