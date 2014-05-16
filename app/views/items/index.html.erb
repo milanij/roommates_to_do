@@ -1,13 +1,30 @@
-<h1>All the Current Items to Buy</h1>
+<h1 class="text-center">All the Current Items to Buy</h1>
+    <div class="well well-lg">
+        <table class="table">
+                <thead>
+                  <tr>
+                    <div colspan="4"><th>Item</th></div>
+                    <div colspan="4">
+                        <th>Quantity</th>
+                        <th>Description</th>
+                        <th>Edit</th>
+                    </div>
+                    <div colspan="4"><th>Buy</th></div>
+                  </tr>
+                </thead>
 
-    <% @items.each do |g| %>
-        <ul>
-            <%= link_to item_path g do %>
-                <li><strong>Name: </strong><%= g.name %></li>
-                <% end %>
-                <li><strong>Quantity: </strong><%= g.quantity %></li>
-                <li><strong>Description: </strong><%= g.description %></li>
-                <hr><br><br>
-        </ul>
-    <% end %>
+            <tbody>
+                  <% @items.each do |g| %>
+                    <tr>
+                      <td><%= g.name %></td>
+                      <td><%= g.quantity %></td>
+                      <td><%= g.description %></td>
+                      <td><%= link_to 'Edit', edit_item_path(g), class: "btn btn-info" %></td>
+                      <td><%= link_to 'I Bought It!', item_path(g), method: :delete, class: "btn btn-success" %></td>
+                    </tr>
+                  <% end %>
+            </tbody>
+        </table>
 
+
+    </div>

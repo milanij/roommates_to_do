@@ -1,6 +1,6 @@
 RoommatesToDo::Application.routes.draw do
   resources :items
-  resource :sessions, only: [:new, :create, :destroy]
+  resources :sessions, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
 
   root 'sessions#new'
