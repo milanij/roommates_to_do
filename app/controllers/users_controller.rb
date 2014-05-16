@@ -9,8 +9,7 @@ class UsersController < ApplicationController
     if @user.save
         session[:remember_token] = @user.id
         @current_user = @user
-        flash[:success] = "You have successfully signed up."
-        redirect_to items_path
+        redirect_to items_path, notice: "You have successfully sign up!"
     else
         render :new
     end

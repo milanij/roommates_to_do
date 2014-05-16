@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
   def update
     @item = Item.find(params[:id])
     if @item.update(params.require(:item).permit(:name, :quantity, :description) )
-      redirect_to items_path
+      redirect_to items_path, notice: "You just updated #{@item[:name]}."
     else
       render "edit"
     end
