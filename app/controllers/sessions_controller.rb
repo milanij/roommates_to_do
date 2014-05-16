@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
   include SessionsHelper
 
   def new
+     @user = User.new
   end
 
   def create
@@ -11,9 +12,13 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:session][:password])
       session[:remember_token] = @user.id
       @current_user = @user
-      redirect_to items_path
+      redirect_to items_path, notice: "You have successfully logged in."
     else
-      render new_session_path, error: "Invalid email/password combination. Please try again."
+      flash.now[:notice] = "Invalid login/password combination. Please try again."
+      render :new
+    
+
+
     end
 
   end

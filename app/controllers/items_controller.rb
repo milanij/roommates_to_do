@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.create(params.require(:item).permit(:name, :quantity, :description) )
-    redirect_to items_path
+    redirect_to items_path, notice: "You just added #{@item[:name]} to the shopping list."
   end
 
   def edit

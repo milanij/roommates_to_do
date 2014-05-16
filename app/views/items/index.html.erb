@@ -1,3 +1,7 @@
+<% if flash[:notice] %>
+  <div class="alert alert-success"><%= flash[:notice] %></div>
+<% end %>
+
 <h1 class="text-center">All the Current Items to Buy</h1>
     <div class="well well-lg">
         <table class="table">
