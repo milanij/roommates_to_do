@@ -1,8 +1,9 @@
-<h1><%= @item.name %></h1>
+<div class="well well-lg">
+    <h1><%= @item.name %></h1>
+        <p>Quantity: <%= @item.quantity %></p>
+        <p>Description: <%= @item.description %></p>
 
-<p>Quantity: <%= @item.quantity %></p>
-<p>Description: <%= @item.description %></p>
-
-<%= link_to "Edit this Item", edit_item_path(@item) %>
-<br>
-<%= link_to "Remove This Item From the List", {:action => 'destroy'}, :method => :delete, confirm: "Really take this item off the list?" %>
+    <%= link_to "Edit this Item", edit_item_path(@item) %>
+    <br>
+    <%= link_to "Remove This Item From the List", {:action => 'destroy'}, :method => :delete, confirm: "Really take this item off the list?" %>
+</div>

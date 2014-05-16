@@ -23,7 +23,7 @@
           <li><%= link_to "Sign Up", new_user_path %></li>
           <li><%= link_to "Log In", new_session_path %></li>
         <% else %>
-          <li style="color:white">Hello, <%= current_user.name.capitalize %></li>
+          <li style="color:white">Hello, <%= current_user.name.titleize %></li>
           <li><%= link_to "Log Out", new_session_path, :method => :delete %></li>
         <% end %>
       </ul>

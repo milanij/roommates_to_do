@@ -1,10 +1,11 @@
-<h1>Log In</h1>
-
-
-
-<%= form_for :session, :url => sessions_path do |f| %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  <%= f.submit "Login" %>
+<% if flash[:error] %>
+  <div class="alert alert-warning"><%= flash[:error] %></div>
 <% end %>
-
+<div class="well well-lg">
+    <h1>Log In</h1>
+        <%= form_for :session, :url => sessions_path do |f| %>
+            Email: <%= f.text_field :email %>
+            Password: <%= f.password_field :password %>
+            <%= f.submit "Login" %>
+        <% end %>
+</div>

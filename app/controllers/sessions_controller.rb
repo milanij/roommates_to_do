@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+  
+  include SessionsHelper
+
   def new
   end
 
@@ -10,8 +13,7 @@ class SessionsController < ApplicationController
       @current_user = @user
       redirect_to items_path
     else
-      flash[:error] = "Invalid email/password combination"
-      render 'new'
+      render new_session_path, error: "Invalid email/password combination. Please try again."
     end
 
   end

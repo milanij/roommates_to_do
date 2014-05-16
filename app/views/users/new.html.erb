@@ -1,8 +1,9 @@
-<h1>Sign up for Roommates To Do!!</h1>
-
-<%= form_for @user do |f| %>
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  <%= f.submit %>
-<% end %>
+<div class="well well-lg">
+    <h1>Sign up for Roommates To Do!!</h1>
+        <%= form_for @user do |f| %>
+            Name: <%= f.text_field :name %>
+            Email: <%= f.text_field :email %>
+            Password: <%= f.password_field :password %>
+            <%= f.submit %>
+        <% end %>
+</div>
