@@ -2,13 +2,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <p class="navbar-brand">Roommates Shopping List</p>
+      <p class=" navbar-brand">Roommates Shopping List</p>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -23,7 +17,7 @@
           <li><%= link_to "Sign Up", new_user_path %></li>
           <li><%= link_to "Log In", new_session_path %></li>
         <% else %>
-          <li style="color:white">Hello, <%= current_user.name.titleize %></li>
+          <li style="color:white; verticle-align: center">Hello, <%= current_user.name.titleize %></li>
           <li><%= link_to "Log Out", new_session_path, :method => :delete %></li>
         <% end %>
       </ul>

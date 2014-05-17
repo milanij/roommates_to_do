@@ -6,6 +6,9 @@ class User
     field :email, type: String
     field :password_digest, type: String
 
+    validates_presence_of :name
+    validates_presence_of :email
+
     def password
         @password
     end

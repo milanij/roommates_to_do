@@ -4,6 +4,8 @@ RoommatesToDo::Application.routes.draw do
   resources :users, only: [:new, :create]
 
   root 'sessions#new'
+
+   get 'users', :to => 'users#new'
   
   # get "users/new"
   # get "users/create"

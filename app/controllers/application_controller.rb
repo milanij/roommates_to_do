@@ -12,4 +12,9 @@ def authenticate_user
     end
 end
 
+def session_create
+    session[:remember_token] = @user.id
+    @current_user = @user
+end
+
 

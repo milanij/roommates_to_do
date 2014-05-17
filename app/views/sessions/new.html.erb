@@ -2,6 +2,10 @@
   <div class="alert alert-danger"><%= flash.now[:notice] %></div>
 <% end %>
 
+<% if flash[:goodbye] %>
+  <div class="alert alert-info"><%= flash.now[:goodbye] %></div>
+<% end %>
+
 <div class="well well-lg">
     <h1>Log In</h1>
         <%= form_for :session, :url => sessions_path do |f| %>
