@@ -13,7 +13,7 @@ include ApplicationHelper
       redirect_to items_path, notice: "You have successfully logged in."
     else
       flash.now[:notice] = "Invalid login/password combination. Please try again."
-      render new_user_path
+      render :new
     end
 
   end
