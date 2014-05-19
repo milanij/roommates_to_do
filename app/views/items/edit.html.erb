@@ -1,9 +1,14 @@
-<div class="well well-lg">
-    <h1>Edit an Item</h1>
-        <%= form_for @item do |f| %>
-            Item: <%= f.text_field :name %>
-            Quantity: <%= f.text_field :quantity %>
-            Description: <%= f.text_field :description %>
-            <%= f.submit %>
-        <% end %>
+<div class="col-md-4"></div>
+    <div class="col-md-4">
+    <div class="well well-md">
+        <h1>Edit an Item</h1>
+            <%= form_for @item do |f| %>
+                Item: <%= f.text_field :name, class: "form-control" %>
+                Quantity: <%= f.text_field :quantity, class: "form-control" %>
+                Description: <%= f.text_field :description, class: "form-control" %>
+                <%= f.submit "Submit", class: "btn btn-success" %>
+            <% end %>
+            <div class="clear"></div>
+    </div>
 </div>
+<div class="col-md-4"></div>

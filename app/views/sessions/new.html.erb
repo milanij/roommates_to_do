@@ -1,18 +1,18 @@
-<% if flash[:notice] %>
-  <div class="alert alert-danger"><%= flash.now[:notice] %></div>
-<% end %>
-
-<% if flash[:goodbye] %>
-  <div class="alert alert-info"><%= flash.now[:goodbye] %></div>
-<% end %>
 <div class="col-md-4"></div>
 <div class= "col-md-4">
     <div class="well well-md">
+        <% if flash[:notice] %>
+            <div class="alert alert-danger"><%= flash.now[:notice] %></div>
+        <% end %>
+
+        <% if flash[:goodbye] %>
+          <div class="alert alert-info"><%= flash.now[:goodbye] %></div>
+        <% end %>
         <h1>Log In</h1>
             <%= form_for :session, :url => sessions_path do |f| %>
                 Email: <%= f.text_field :email, class: "form-control" %>
                 Password: <%= f.password_field :password, class: "form-control" %>
-                <%= f.submit :submit, class: "btn btn-success" %>
+                <%= f.submit "Submit", class: "btn btn-success" %>
             <% end %>
             <div class="clear"></div>
 
