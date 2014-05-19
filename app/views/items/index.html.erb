@@ -18,7 +18,7 @@
                 </thead>
 
             <tbody>
-                  <% @items.each do |g| %>
+                  <% @items.reverse.each do |g| %>
                     <tr>
                       <td><%= link_to g.name, item_path(g) %></td>
                       <td><%= g.quantity %></td>
