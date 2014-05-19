@@ -2,12 +2,19 @@
   <div class="alert alert-warning"><%= flash.now[:warning] %></div>
 <% end %>
 
-<div class="well well-lg">
-    <h1>Sign up for Roommates To Do!!</h1>
-        <%= form_for @user do |f| %>
-            Name: <%= f.text_field :name %>
-            Email: <%= f.text_field :email %>
-            Password: <%= f.password_field :password %>
-            <%= f.submit %>
-        <% end %>
+<div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4" id="container">
+        <div class="well well-md">
+            <h1>Sign Up</h1>
+                <%= form_for @user do |f| %>
+                    Name: <%= f.text_field :name, class: "form-control" %>
+                    Email: <%= f.text_field :email, class: "form-control" %>
+                    Password: <%= f.password_field :password, class: "form-control" %>
+                    <%= f.submit :submit, class: "btn btn-success" %>
+                    <div class="clear"></div>
+                <% end %>
+        </div>
+</div>
+    <div class="col-md-4"></div>
 </div>
