@@ -7,28 +7,30 @@
         <table class="table">
                 <thead>
                   <tr>
-                    <div class="col-md-3"><th>Item</th></div>
-                    <div class="col-md-6">
-                        <th>Quantity</th>
-                        <th>Description</th>
-                        <th>Edit</th>
-                    </div>
-                    <div class="col-md-3"><th>Buy</th></div>
+                      <div class="col-2">
+                      <th>Item</th>
+                      </div>
+                      <div class="col-9">
+                      <th>Quantity</th>
+                      </div>
+                      <div class="col-1">
+                      <th>Description</th>
+                      <th>Edit</th>
+                      <th>Buy</th>
+                      </div>
                   </tr>
                 </thead>
 
             <tbody>
                   <% @items.reverse.each do |g| %>
                     <tr>
-                      <td><%= link_to g.name, item_path(g) %></td>
-                      <td><%= g.quantity %></td>
-                      <td><%= g.description %></td>
-                      <td><%= link_to 'Edit', edit_item_path(g), class: "btn btn-info" %></td>
-                      <td><%= link_to 'I Bought It!', item_path(g), method: :delete, class: "btn btn-success" %></td>
+                        <td><%= link_to g.name, item_path(g) %></td>
+                        <td><%= g.quantity %></td>
+                        <td><%= g.description %></td>
+                        <td><%= link_to 'Edit', edit_item_path(g), class: "btn btn-info" %></td>
+                        <td><%= link_to 'I Bought It!', item_path(g), method: :delete, class: "btn btn-success" %></td>
                     </tr>
                   <% end %>
             </tbody>
         </table>
-
-
     </div>
