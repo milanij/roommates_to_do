@@ -21,7 +21,7 @@ include ApplicationHelper
   def destroy
     # @user = User.find(params[:name])
     session.delete(:remember_token)
-    flash.now[:goodbye] = "Goodbye. Come back soon."  
+    flash.now[:goodbye] = "Goodbye, . Come back soon."  
     render :new
   end
 
