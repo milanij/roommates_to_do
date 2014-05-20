@@ -1,15 +1,10 @@
 <div class ="col-md-4"></div>
     <div class ="col-md-4">
-    <div class="well well-md">
-    <h1>Add an Item to the List</h1>
+        <div class="well well-md">
+            <h1>Add an Item to the List</h1>
 
-    <%= form_for @item do |f| %>
-        Item: <%= f.text_field :name, class: "form-control" %>
-        Quantity: <%= f.text_field :quantity, class: "form-control" %>
-        Description: <%= f.text_field :description, class: "form-control" %>
-        <%= f.submit "Submit", class: "btn btn-success" %>
-        <div class="clear"></div>
-    <% end %>
-    </div>
+                <%= render partial: 'items/form' %>
+
+        </div>
     </div>
 <div class ="col-md-4"></div>
