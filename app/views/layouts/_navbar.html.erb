@@ -17,7 +17,7 @@
           <li><%= link_to "Sign Up", new_user_path %></li>
           <li><%= link_to "Log In", new_session_path %></li>
         <% else %>
-          <li style="color:white; verticle-align: center">Hello, <%= current_user.name.titleize %></li>
+          <p class="navbar-text">Hello, <%= current_user.name.titleize %></p>
           <li><%= link_to "Log Out", new_session_path, :method => :delete %></li>
         <% end %>
       </ul>
