@@ -1,0 +1,10 @@
+<div class="col-md-4"></div>
+<div class="well col-md-4">
+    <%= form_for @list do |l| %>
+        Change the List's Name: <%= l.text_field :name, class: "form-control" %>
+        <%= l.submit "Submit", class: "btn btn-success" %>
+        <div class="clear"></div>
+    <% end %>
+
+</div>
+<div class="col-md-4"></div>

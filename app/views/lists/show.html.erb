@@ -1,0 +1,38 @@
+<% if flash[:notice] %>
+  <div class="alert alert-success"><%= flash[:notice] %></div>
+<% end %>
+
+<h1 class="text-center"><%= @list.name.titleize %>
+    <%= link_to "Add an Item to This List", new_list_item_path(@list), class: "btn btn-success" %>
+</h1>
+    <div class="well well-md">
+        <table class="table">
+                <thead>
+                  <tr>
+                      <div class="col-2">
+                      <th>Item</th>
+                      </div>
+                      <div class="col-9">
+                      <th>Quantity</th>
+                      </div>
+                      <div class="col-1">
+                      <th>Description</th>
+                      <th>Edit</th>
+                      <th>Buy</th>
+                      </div>
+                  </tr>
+                </thead>
+
+            <tbody>
+                  <% @list.items.reverse.each do |g| %>
+                    <tr>
+                        <td><%= link_to g.name, list_item_path(@list, g) %></td>
+                        <td><%= g.quantity %></td>
+                        <td><%= g.description %></td>
+                        <td><%= link_to 'Edit', edit_list_item_path(@list, g), class: "btn btn-info" %></td>
+                        <td><%= link_to 'I Bought It!', list_item_path(@list, g), method: :delete, class: "btn btn-success" %></td>
+                    </tr>
+                  <% end %>
+            </tbody>
+        </table>
+    </div>

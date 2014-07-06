@@ -1,0 +1,12 @@
+<div class="col-md-4"></div>
+<div class="well col-md-4">
+<h1>The List of Lists</h1>
+
+<% @lists.reverse.each do |l| %>
+    <h2><%= link_to l.name, list_path(l) %>
+            <%= link_to "Delete This List", list_path(l), :method => :delete, class: "btn btn-danger btn-xs" %>
+    </h2>
+    <br>
+<% end %>
+</div>
+<div class="col-md-4"></div>

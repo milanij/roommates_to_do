@@ -5,7 +5,7 @@
             <p>Quantity: <%= @item.quantity %></p>
             <p>Description: <%= @item.description %></p>
 
-        <%= link_to "Edit this Item", edit_item_path(@item) %>
+        <%= link_to "Edit this Item", edit_list_item_path(@list, @item) %>
         <br>
         <%= link_to "Remove This Item From the List", {:action => 'destroy'}, :method => :delete, confirm: "Really take this item off the list?" %>
     </div>
