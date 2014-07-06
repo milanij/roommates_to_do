@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session_create
-      redirect_to items_path, notice: "You have successfully signed up!"
+      redirect_to lists_path, notice: "You have successfully signed up!"
     else
         render :new
     end
