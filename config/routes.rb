@@ -7,6 +7,8 @@ RoommatesToDo::Application.routes.draw do
 
   get 'users', :to => 'users#new'
 
+  get 'sessions', :to => 'sessions#new'
+
   resources :lists do
     resources :items
   end
