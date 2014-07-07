@@ -5,7 +5,7 @@
 </h1>
   
 <% if flash[:notice] %>
-  <div class="alert alert-success"><%= flash[:notice] %></div>
+  <div class="alert alert-success"><%= flash.now[:notice] %></div>
 <% end %>
     <div class="well well-md">
         <table class="table">

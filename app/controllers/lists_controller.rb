@@ -1,6 +1,6 @@
 class ListsController < ApplicationController
   before_action :set_list, :only => [:edit, :update, :show, :destroy]
-  # before_action :authenticate_user
+  before_action :authenticate_user
 
   def index
     @lists = List.all
@@ -40,9 +40,6 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
   end
 
-  # def set_item
-  #   @item = Item.find(params[:id])
-  # end
 
   def list_params
     params.require(:list).permit(:name) 
