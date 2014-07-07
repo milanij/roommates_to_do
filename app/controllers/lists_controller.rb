@@ -1,6 +1,6 @@
 class ListsController < ApplicationController
   before_action :set_list, :only => [:edit, :update, :show, :destroy]
-  # before_action :set_item
+  before_action :authenticate_user
 
   def index
     @lists = List.all
