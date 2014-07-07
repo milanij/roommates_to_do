@@ -30,7 +30,7 @@
                         <td><%= link_to g.name, list_item_path(@list, g) %></td>
                         <td><%= g.quantity %></td>
                         <td><%= g.description %></td>
-                        <td><%= link_to 'I Bought It!', list_item_path(@list, g), method: :delete, class: "btn btn-success" %></td>
+                        <td><%= link_to 'I Bought It!', list_item_path(@list, g), method: :delete, class: "btn btn-success btn-xs" %></td>
                     </tr>
                   <% end %>
             </tbody>
