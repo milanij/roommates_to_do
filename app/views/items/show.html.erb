@@ -5,9 +5,10 @@
             <p>Quantity: <%= @item.quantity %></p>
             <p>Description: <%= @item.description %></p>
 
-        <%= link_to "Edit this Item", edit_list_item_path(@list, @item) %>
+        <%= link_to "Edit this Item", edit_list_item_path(@list, @item), class: "btn btn-info" %>
         <br>
-        <%= link_to "Remove This Item From the List", {:action => 'destroy'}, :method => :delete, confirm: "Really take this item off the list?" %>
+        <%= link_to "Remove This Item From the List", {:action => 'destroy'}, :method => :delete, class: "btn btn-success"  %>
+        <div class="clear"></div>
     </div>
 </div>
 <div class="col-md-4"></div>
