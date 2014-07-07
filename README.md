@@ -1,6 +1,8 @@
 Roommates To Do
 ================================================
 
+http://roommates-app.herokuapp.com/
+
 This is a simple app to keep track of shopping lists between roommates/housemates.
 
 At this point it is very simple. There is only one list and anyone who logs in can manipulate that list.
