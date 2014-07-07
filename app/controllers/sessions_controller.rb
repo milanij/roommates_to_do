@@ -10,7 +10,7 @@ include ApplicationHelper
 
     if @user && @user.authenticate(params[:session][:password])
       session_create
-      redirect_to items_path, notice: "You have successfully logged in."
+      redirect_to lists_path, notice: "You have successfully logged in."
     else
       flash.now[:notice] = "Invalid login/password combination. Please try again."
       render :new
