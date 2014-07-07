@@ -14,17 +14,13 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <% if current_user %>
-      <ul class="nav navbar-nav">
-        <li><%= link_to "Add a New Shopping List", new_list_path %></li>
-      </ul>
-      <% end %>
       <ul class="nav navbar-nav navbar-right">
         <% if !current_user %>
           <li><%= link_to "Sign Up", new_user_path %></li>
           <li><%= link_to "Log In", new_session_path %></li>
         <% else %>
           <li class="navbar-text">Hello, <%= current_user.name.titleize %></li>
+          <li><%= link_to "Add a New Shopping List", new_list_path %></li>
           <li><%= link_to "Log Out", new_session_path, :method => :delete %></li>
         <% end %>
       </ul>
