@@ -8,8 +8,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session_create
-      flash.now[:notice] = "You have successfully signed up!"
       redirect_to lists_path
+      flash[:notice] = "You have successfully signed up!"
     else
         render :new
     end

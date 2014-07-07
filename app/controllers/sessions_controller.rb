@@ -10,20 +10,26 @@ include ApplicationHelper
 
     if @user && @user.authenticate(params[:session][:password])
       session_create
-      flash.now[:notice] = "You have successfully logged in."
       redirect_to lists_path
+      flash[:notice] = "You have successfully logged in."
     else
-      flash.now[:notice] = "Invalid login/password combination. Please try again."
       render :new
+      flash[:notice] = "Invalid login/password combination. Please try again."
     end
 
   end
 
   def destroy
-    # @user = User.find(params[:name])
-    session.delete(:remember_token)
-    flash.now[:goodbye] = "Goodbye. Come back soon."  
-    render :new
+    if session[:remember_token] == nil
+      render :new
+    else
+      @user = User.find(session[:remember_token])
+      @user_bye = @user.name.capitalize
+      session.delete(:remember_token)  
+      flash[:goodbye] = "Goodbye, #{@user_bye}. Come back soon."
+      render :new
+    end
+
   end
 
 end

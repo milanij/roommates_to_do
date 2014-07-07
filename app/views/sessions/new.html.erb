@@ -5,6 +5,10 @@
             <div class="alert alert-danger"><%= flash.now[:notice] %></div>
         <% end %>
 
+        <% if flash[:sign_in] %>
+            <div class="alert alert-danger"><%= flash.now[:sign_in] %></div>
+        <% end %>
+
         <% if flash[:goodbye] %>
           <div class="alert alert-info"><%= flash.now[:goodbye] %></div>
         <% end %>
