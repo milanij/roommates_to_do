@@ -1,19 +1,21 @@
+<h1 class="text-center"><%= @list.name.titleize %>
+    <br>
+    <%= link_to "Add an Item to This List", new_list_item_path(@list), class: "btn btn-success" %>
+    <div class="clear"></div>
+</h1>
+    <br>
 <% if flash[:notice] %>
   <div class="alert alert-success"><%= flash[:notice] %></div>
 <% end %>
-
-<h1 class="text-center"><%= @list.name.titleize %>
-    <%= link_to "Add an Item to This List", new_list_item_path(@list), class: "btn btn-success" %>
-</h1>
     <div class="well well-md">
         <table class="table">
                 <thead>
                   <tr>
                       <div class="row">
-                        <div class="col-2">
+                        <div class="col-md-2">
                           <th>Item</th>
                         </div>
-                        <div class="col-8">
+                        <div class="col-md-8">
                           <th>Quantity</th>
                         </div>
                         <div class="col-md-2">
